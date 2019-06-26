@@ -34,6 +34,14 @@ describe('application routes', () => {
         expect(res.text).toEqual(expect.stringContaining('green'));
       });
   });
+  it('returns a not found', () => {
+    return request(app)
+      .get('/sometingelse')
+      .then(res => {
+        expect(res.status).toBe(404);
+        expect(res.text).toEqual(expect.stringContaining('not found'));
+      });
+  });
 });
 
 
