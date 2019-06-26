@@ -31,6 +31,9 @@ const server = createServer((req, res) => {
       <li>Manatee</li>
       <li>Horse</li>
     </ul>
+    <script>
+      console.log('hi');
+    </script>
   </body>
   </html>`);
 });
